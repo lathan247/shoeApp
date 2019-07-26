@@ -1,22 +1,24 @@
 "use strict"
 
-
-var input = document.querySelector("input");
-var button = document.querySelector("button");
-
-button.addEventListener("click", function() {
-    console.log(input.value);
-    window.alert("Your entry was recieved! Email is valid for one entry! Good Luck!")
-
-
-function ValidateEmail(mail) 
-{
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
-  {
-    return (true)
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
   }
-    alert("You have entered an invalid email address!")
-    return (false)
-}
-
-});
+  
+  function validate() {
+    var $result = $("#result");
+    var email = $("#email").val();
+    $result.text("");
+  
+    if (validateEmail(email)) {
+      $result.text(email + " is valid :)");
+      $result.css("color", "green");
+    } else {
+      $result.text(email + " is not valid :(");
+      $result.css("color", "red");
+    }
+    return false;
+  }
+  
+  $("#validate").on("click", validate);  
+  validate.on("click");

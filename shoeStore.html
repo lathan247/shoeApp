@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link a href="shoeStore.css" rel="stylesheet">
+    <!-- <link a href="shoeStore.css" rel="stylesheet"> -->
 </head>
 <body>
     <h1>FLIGHT CLUB</h1>
@@ -17,11 +17,20 @@
                 <option value="New Balance">New Balance</option>
             </select> -->
         <!-- </form> -->
-        <h2>Flight Club is offering a new shoe giveaway! Enter your email address below to enter!</h2>
+        <!-- <h2>Flight Club is offering a new shoe giveaway! Enter your email address below to enter!</h2>
         <input type="text" name="Search Shoes Brands">
-        <button>submit</button>
+        <button>submit</button> -->
 
-     
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <form>
+          <p>Flight Club is offering a new shoe giveaway! Enter your email address below to enter!</p>
+          <input id='email'>
+          <button type='submit' id='validate'>Enter!</button>
+        </form>
+        
+        <h2 id='result'></h2>
+
 </body>
-<script src="main1.js"></script>
+<script src="shoeApp.js"></script>
 </html>
