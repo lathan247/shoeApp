@@ -1,0 +1,24 @@
+.Gallery {
+    margin: 10px 50px;
+}
+.Gallery img {
+    transition: 1s;
+    padding: 15px;
+    width: 200px;
+}
+.Gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+body {
+    background-image: url("jor.jpg");
+}
+
+h1{
+    color: yellow;
+}
+
+p{
+    color: yellow;
+}

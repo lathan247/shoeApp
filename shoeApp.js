@@ -11,10 +11,10 @@ function validateEmail(email) {
     $result.text("");
   
     if (validateEmail(email)) {
-      $result.text(email + " is valid :)");
+      $result.text(email + " is valid! Good Luck! Winners announced 8/31/2019!");
       $result.css("color", "green");
     } else {
-      $result.text(email + " is not valid :(");
+      $result.text(email + " is not valid, try again");
       $result.css("color", "red");
     }
     return false;
